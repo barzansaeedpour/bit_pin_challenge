@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            direction: rtl;
+        }
+        .table{
+            width: 100%;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>لیست مطالب</h1>
+    
+    <table class="table">
+        <thead>
+          <tr style="text-align: right;">
+            <th>شماره</th>
+            <th>عنوان مطالب</th>
+            <th>متن</th>
+            <th>امتیاز</th>
+            <th></th>
+          </tr>
+          <hr/>
+         </thead>
+         <tbody style="margin: 10px;">
+
+            {%for content in contents%}
+            <tr>
+                <td>{{content.id}}</td>
+                <td>{{content.title}}</td>
+                <td>{{content.text}}</td>
+                <td>{{content.score}}</td>
+                <td>
+                    <form action="/detail" method="get">
+                        <input type="submit" value="امتیاز دهی">
+                    </form>
+                </td>
+                
+            </tr>
+            {%endfor%}
+             
+        </tbody>
+      </table>
+</body>
+</html>

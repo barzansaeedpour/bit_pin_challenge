@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "de47deb1-d001-49c2-8b73-6ae2a659bfdc",
+		"name": "bit_pin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6817674"
+	},
+	"item": [
+		{
+			"name": "sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"09376490446\",\r\n    \"phone_number\":\"09376490446\",\r\n    \"role\":3,\r\n    \"first_name\":\"بارزان\",\r\n    \"last_name\":\"سعیدپور\",\r\n    \"jensiat\":\"مرد\",\r\n    \"email\":\"barzansaeedpour@gmail.com\",\r\n    \"birth_date\":\"1374/05/01\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/sign_up",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"sign_up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_contents",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token fff371770511487b6d72b3aa1ee89dfdc575ab07",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/contens/get_contents",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"contens",
+						"get_contents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "submit_score/update_score",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token fff371770511487b6d72b3aa1ee89dfdc575ab07",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content_id\":2,\r\n    \"score\":4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/score/submit_score",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"score",
+						"submit_score"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
